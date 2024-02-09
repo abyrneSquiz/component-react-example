@@ -1,0 +1,11 @@
+#list  {
+  display: flex;
+  flex-wrap: wrap;
+}
+#list div{
+  width: 33%;
+  padding: 5%;
+  border-radius: 10px;
+  border: 1px solid #999;
+  margin: 1em auto;
+}

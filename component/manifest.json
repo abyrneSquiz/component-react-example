@@ -1,0 +1,97 @@
+{
+  "$schema": "http://localhost:3000/schemas/v1.json",
+  "name": "react-dxp-component",
+  "namespace": "demo-components",
+  "displayName": "react demo component",
+  "description": "Example component using react and headless client requrests",
+  "version": "0.0.1",
+  "mainFunction": "main",
+
+  "icon": {
+    "id": "fiber_new",
+    "color": {
+      "type": "enum",
+      "value": "blue"
+    }
+  },
+
+  "functions": [
+    {
+      "name": "main",
+      "entry": "main.js",
+      "input": {
+        "type": "object",
+        "properties": {
+          "ServicesFeed": {
+            "type": "string",
+            "title": "Serach data feed URL"
+          },
+          "ServicesFeedQuery": {
+            "type": "string",
+            "title": "Serach Query"
+          },
+          "itemCols": {
+            "type": "number",
+            "title": "Items per Row"
+          },
+          "itemMax": {
+            "type": "number",
+            "title": "Items totla"
+          }
+        },
+        "required": []
+      },
+      "output": {
+        "responseType": "html",
+        "staticFiles": [
+          {
+            "location": "header",
+            "file": {
+              "type": "css",
+              "filepath": "./assets/index.css"
+            }
+          },
+          {
+            "location": "footer",
+            "file": {
+              "type": "js",
+              "filepath": "https://unpkg.com/react@18/umd/react.production.min.js"
+            }
+          },
+          {
+            "location": "footer",
+            "file": {
+              "type": "js",
+              "filepath": "https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+            }
+          },
+          {
+            "location": "footer",
+            "file": {
+              "type": "js",
+              "filepath": "./assets/index.js"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "previews": {
+    "default": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "previews/example.data.json"
+          },
+          "wrapper": {
+            "path": "previews/preview.html"
+          }
+        }
+      }
+    }
+  },
+  "staticFiles": {
+    "locationRoot": "dist"
+  }
+}
