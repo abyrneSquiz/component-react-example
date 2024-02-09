@@ -21,4 +21,3 @@ deployment needs to occur using commands in the components folder
 dxp-next auth login --tenant=
 dxp-next cmp deploy ./
 ```
-
