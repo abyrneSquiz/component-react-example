@@ -9,7 +9,7 @@ export default defineConfig({
       "/__api": "https://sales-us.matrix.squiz.cloud",
     }  
   } ,
-  root: `./cs_app/`,
+  root: `./component/cs_app/`,
   plugins: [react()],
   build: {
     
