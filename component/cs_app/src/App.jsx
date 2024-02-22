@@ -1,16 +1,24 @@
 import React from "react";
+import { useState } from 'react';
 import './default.scss';
 
-function ModuleComp() {
- 
-  let data = true;
+
+function ModuleComp({feed}) {
+
+  let [fetchData,setFetchdata] = useState(null)
+
+  if(!fetchData){     
+    fetch(feed).then((response)=>{ return response.json() } ).then((d)=>setFetchdata(d) )
+  }
+
   /** Render component */
   return (
     <div>
-      {data ? ( 
+      {fetchData ? ( 
       <div>
-        <h2>Hello</h2>
-        <p>World wide</p>
+        <h2>Quotes</h2>
+        <p>From the api: {feed}</p>
+        {fetchData? <ul>{fetchData.map((d,i)=>{return <li>{d.text}</li>})}</ul>: <span></span>}
        </div>
       )
        : (

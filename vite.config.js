@@ -5,15 +5,15 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   server: {
     proxy: {
-      "/headless": "https://sales-us.matrix.squiz.cloud",
-      "/__api": "https://sales-us.matrix.squiz.cloud",
+      "/headless": "https://sales-au.matrix.squiz.cloud",
+      "/__api": "https://sales-au.matrix.squiz.cloud",
     }  
   } ,
   root: `./component/cs_app/`,
   plugins: [react()],
   build: {
     
-    outDir:`../component/dist/`,
+    outDir:`../dist/`,
     rollupOptions: {
       output: {
         entryFileNames: `assets/[name].js`,

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently --kill-others \"npm run dev:dxp\" \"npm run dev:vite\"",
-    "dev:vite": "vite build -w  ",
+    "dev:vite": "vite build -w --emptyOutDir",
     "dev:dxp": "dxp-next cmp dev ./component/",
     "build": "npm-run-all build:*",
     "build:client": "vite build",

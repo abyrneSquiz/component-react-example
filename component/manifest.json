@@ -4,7 +4,7 @@
   "namespace": "demo-components",
   "displayName": "react demo component",
   "description": "Example component using react and headless client requrests",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "mainFunction": "main",
 
   "icon": {
